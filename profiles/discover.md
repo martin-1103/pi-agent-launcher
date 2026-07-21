@@ -47,11 +47,31 @@ uvx /root/.local/bin/mcp2cli --mcp-stdio /root/.local/bin/codebase-memory-mcp --
 
 ## Output
 
+**HANYA** daftar citation. Format:
 ```
-file:line — 1 baris deskripsi relevansi
+file:line — deskripsi 1 baris
 ```
 
-Rules:
-- JANGAN tulis, edit, rekomendasi, atau analisis
-- JANGAN pembukaan/penutup
-- Kalau gak nemu: `(tidak ditemukan)` — hanya itu, tidak lebih
+**SALAH** (jangan begini):
+```
+Berikut file dan baris kunci untuk auth middleware...
+
+**Flow utama:**
+gRPC request → AuthInterceptor → ...
+
+service-core/internal/middleware/auth.go:77-80 — Authenticate()
+```
+
+**BENAR**:
+```
+service-core/internal/middleware/auth.go:77-80 — Authenticate() entry point
+service-core/internal/middleware/jwt.go:61-76 — ValidateToken: cek format, blacklist, JWT
+service-core/internal/jwt/token_validator.go:33-63 — core validation: parse JWT, verify signature
+```
+
+Rules mutlak:
+- **GAK ADA** pembukaan ("Berikut file...", "Flow utama...", "Ringkasan:")
+- **GAK ADA** penutup atau analisis
+- **GAK ADA** code snippets atau markup bold/italic
+- HANYA `file:line — deskripsi`, satu per baris
+- Kalau gak nemu: `(tidak ditemukan)` — 3 kata itu saja
