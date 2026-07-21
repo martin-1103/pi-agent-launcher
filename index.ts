@@ -94,6 +94,24 @@ function resolveProfileDirs(cwd: string): string[] {
   const dirs: string[] = [];
   dirs.push(path.join(os.homedir(), ".pi", "agent", "profiles"));
   dirs.push(path.join(cwd, ".pi", "profiles"));
+
+  // Auto-discover profiles dari package install dir
+  // pi install git/npm naruh extension di ~/.pi/agent/{git,npm}/
+  const agentDir = path.join(os.homedir(), ".pi", "agent");
+  for (const sub of ["git", "npm"]) {
+    try {
+      const entries = fs.readdirSync(path.join(agentDir, sub), { withFileTypes: true });
+      for (const entry of entries) {
+        if (entry.isDirectory()) {
+          const profilesDir = path.join(agentDir, sub, entry.name, "profiles");
+          if (fs.existsSync(profilesDir)) {
+            dirs.push(profilesDir);
+          }
+        }
+      }
+    } catch (_) {}
+  }
+
   return dirs.filter((d) => {
     try { return fs.statSync(d).isDirectory(); } catch { return false; }
   });
