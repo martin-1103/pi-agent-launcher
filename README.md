@@ -123,7 +123,7 @@ pi --agent dev "fix bug di auth.go"
 
 | Setting | Value |
 |---------|-------|
-| Model | `deepseek/deepseek-v4-pro:off` |
+| Model | `deepseek/deepseek-v4-pro` |
 | Tools | `read, bash` |
 | Context | 1M tokens |
 
