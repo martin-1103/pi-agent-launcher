@@ -61,6 +61,7 @@ async function runDiscovery(label, promptText) {
   return new Promise((resolve, reject) => {
     const piArgs = buildPiArgs(promptText);
     const child = spawn("pi", piArgs, {
+      cwd: process.cwd(),
       stdio: ["ignore", "pipe", "pipe"],
       env: { ...process.env, PI_SKIP_VERSION_CHECK: "1" },
     });
