@@ -1,0 +1,9 @@
+{
+  "name": "pi",
+  "description": "Delegate context discovery to Pi agent. Spawns pi with custom profiles for fast codebase exploration.",
+  "version": "0.1.0",
+  "author": {
+    "name": "ariz"
+  },
+  "keywords": ["claude-code", "pi", "discovery", "context"]
+}
