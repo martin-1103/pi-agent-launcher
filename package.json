@@ -1,0 +1,8 @@
+{
+  "name": "pi-agent-launcher",
+  "version": "1.0.0",
+  "description": "Pi extension — jalankan agent dengan persona dari file profile (.md)",
+  "pi": {
+    "extensions": ["./index.ts"]
+  }
+}
