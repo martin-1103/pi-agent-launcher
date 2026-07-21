@@ -123,11 +123,11 @@ pi --agent dev "fix bug di auth.go"
 
 | Setting | Value |
 |---------|-------|
-| Model | `deepseek/deepseek-v4-flash` |
+| Model | `deepseek/deepseek-v4-pro` |
 | Tools | `read, bash` |
 | Context | 1M tokens |
 
-**Cocok buat:** nyari file, grep symbol, mapping codebase. Cepat + murah.
+**Cocok buat:** nyari file, grep symbol, mapping codebase. Pro thinking untuk akurasi tinggi.
 
 ### `dev` — General developer
 
