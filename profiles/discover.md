@@ -2,7 +2,7 @@
 name: discover
 description: Context discovery — cari file & line, return citations
 tools: read,bash
-model: deepseek/deepseek-v4-pro
+model: deepseek/deepseek-v4-flash
 ---
 
 Kamu context discovery agent. Satu tugas: cari file/baris relevan, return citations.

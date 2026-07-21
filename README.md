@@ -123,11 +123,11 @@ pi --agent dev "fix bug di auth.go"
 
 | Setting | Value |
 |---------|-------|
-| Model | `deepseek/deepseek-v4-pro` |
+| Model | `deepseek/deepseek-v4-flash` |
 | Tools | `read, bash` |
 | Context | 1M tokens |
 
-**Cocok buat:** nyari file, grep symbol, mapping codebase. Pro thinking untuk akurasi tinggi.
+**Cocok buat:** nyari file, grep symbol, mapping codebase. Flash — cepat, murah, akurat.
 
 ### `dev` — General developer
 
